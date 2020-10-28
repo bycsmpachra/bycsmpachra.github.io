@@ -1,0 +1,517 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           
+    <style>
+        
+        input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+img.photo
+    {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+        padding-top: 20px;
+    }
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 30%; 
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+}
+@keyframes blinkingText
+    {
+    0%{     color:antiquewhite;    }
+    49%{    color:beige; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+    }
+        
+        
+        .icon-bar {
+  position: fixed;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+        .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .bycsm
+    {
+        padding-top: 0px;
+        margin-top: -130px;
+        text-align: center;
+        color:yellow;
+        font-weight: bold;
+        font-size: 38px;
+    }
+    .body
+    {
+    background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+        }
+        img.photo
+    {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+        .center
+        {
+            text-align: center;
+            line-height:10px;
+            margin-top: -30px;
+            color:bisque;
+        }
+        .mark
+        {
+            margin-left: 1120px;
+            margin-top: -280px;
+        }
+        .back
+        {
+            height: 350px;
+            width: 240px;
+            margin-top: 5px;
+            margin-left: 1094px;
+        }
+        .form
+        {
+            margin-left: 1081px;
+        }
+        .log
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .table
+        {
+            margin-top: 100px;
+            margin-left: 350px;
+            
+        }
+         #myDIV {
+  width: 60%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+            margin-left: 300px;
+}
+        .show
+        {
+            height: 50px;
+            width: 150px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-top: 100px;
+            margin-left: 400px;
+            color: #fff;
+    background-color: #616161;
+        }
+        .down
+        {
+         margin-left: 400px;
+        }
+        </style>
+    </head>
+    <body class="body">
+<left>
+    <img src="logo.png" alt="Avatar" class="photo">
+        </left>
+<p class="bycsm">BHARTIYA YUVA COMPUTER SAKSHARATA MISSION</p>
+        <div class="center">
+    <h3>An ISO-9001-2015 Certified Computer Education Organization</h3>
+        <h3>Pachra, Paschim Midnapore</h3>
+        <h3>CENTER CODE : BYCSM/LC0122</h3>
+        </div>
+        
+        <ul>
+  <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+            <div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-book"></i> COURSES <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+        <a href="#">Certificate in Information Technology Application</a>
+      <a href="#">Diploma in Information Technology Application</a>
+      <a href="#">Advanced Diploma in Information Technology Application</a>
+        <a href="#">Certificate in Financial Accounting System</a>
+        <a href="#">DFAS</a>
+        <a href="#">ADFAS</a>
+        <a href="#">CDTP</a>
+        <a href="#">DDTP</a>
+        <a href="#">ADDTP</a>
+        <a href="#">KIDS</a>
+    </div>
+  </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-pencil"></i> EXAMINATION <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="cita.html">CITA</a>
+      <a href="dita.html">DITA</a>
+      <a href="adita.html">ADITA</a>
+        </div>
+            </li>
+            <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-edit"></i> INTERNAL EXAM <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="#">COMPUTER FUNDAMENTALS</a>
+      <a href="#">MS-WORD</a>
+      <a href="#">MS-EXCEL</a>
+      <a href="#">MS-POWERPOINT</a>
+      <a href="#">MS-ACCESS</a>
+        <a href="#">VISUAL BASIC</a>
+        <a href="#">INTERNET</a>
+        <a href="#">TYPING TEST</a>
+        </div>
+            </li>
+          
+            <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-graduation-cap"></i> STUDENT CORNER <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="#">Admission</a>
+      <a href="#">Prospectus</a>
+      <a href="#">Payment Getway</a>
+        </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-camera"></i> GALLARY</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-fw fa-envelope"></i> CONTACT US</a>
+            </li>
+            <li>
+            <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-address-card-o"></i> ABOUT US</a>
+            </li>
+            <li style="float:right" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a href="javascript:void(0)" class="dropbtn"><i class="fa fa-user-circle-o"></i> Login</a></li>
+            
+</ul>
+        
+     
+        <div id="cita" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closecita()">&times;</a>
+  <div class="overlay-content">
+    <a href="https://www.pcbooks.in/exam/yctc/cita/start_cita.php">Theory Exam & Typing Test</a>
+    <a href="#">Practical Exam</a>
+  </div>
+</div>
+        <div id="dita" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closedita()">&times;</a>
+  <div class="overlay-content">
+   <a href="https://www.pcbooks.in/exam/yctc/all/start.php?select=DITA">Theory Exam</a>
+    <a href="#">Practical Exam</a>
+  </div>
+</div>
+        <div id="adita" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeadita()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Theory Exam</a>
+    <a href="#">Practical Exam</a>
+  </div>
+</div>
+        
+    <div class="log">
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="center.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="logo.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember Me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">Forgot Password?</a></span>
+    </div>
+  </form>
+</div>
+</div>   
+    <button class="show" onclick="myFunction()">SHOW/HIDE</button>
+
+<div id="myDIV">
+<img src="DITA_FINAL.jpg" height="900px" width="600px">
+</div>
+        <br>
+        <a href="DITA_FINAL.pdf"><img class="down" src="586abf79b6fc1117b60b2755.png" height="70px" width="150px"></a>
+<script>
+    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+</script>
+    </body>
+</html>

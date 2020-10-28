@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <title></title>
+    <style>
+        .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .bycsm
+    {
+        padding-top: 0px;
+        margin-top: -130px;
+        text-align: center;
+        color:yellow;
+        font-weight: bold;
+        font-size: 38px;
+    }
+    .body
+    {
+        background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    }
+        img.photo
+    {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+        .center
+        {
+            text-align: center;
+            line-height:10px;
+            margin-top: -30px;
+            color:bisque;
+        }
+        #myDIV {
+  width: 60%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+            margin-left: 300px;
+}
+        .show
+        {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-top: 100px;
+            margin-left: 400px;
+            color: #fff;
+    background-color: #616161;
+        }
+        .down
+        {
+            
+            margin-top: 100px;
+            margin-bottom: -2000px;
+            margin-left: 350px;
+            color:orange;
+    background-color:orange;
+        }
+        </style>
+    </head>
+    <body class="body">
+<left>
+    <img src="logo.png" alt="Avatar" class="photo">
+        </left>
+<p class="bycsm">BHARTIYA YUVA COMPUTER SAKSHARATA MISSION</p>
+        <div class="center">
+    <h3>An ISO-9001-2015 Certified Computer Education Organization</h3>
+        <h3>Pachra, Paschim Midnapore</h3>
+        <h3>CENTER CODE : BYCSM/LC0122</h3>
+        </div>
+        <ul>
+  <li><a href="#home">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">&#xf02d;COURSES</a>
+    <div class="dropdown-content">
+        <a href="#">Certificate in Information Technology Application</a>
+      <a href="#">Diploma in Information Technology Application</a>
+      <a href="#">Advanced Diploma in Information Technology Application</a>
+        <a href="#">Certificate in Financial Accounting System</a>
+        <a href="#">DFAS</a>
+        <a href="#">ADFAS</a>
+        <a href="#">CDTP</a>
+        <a href="#">DDTP</a>
+        <a href="#">ADDTP</a>
+        <a href="#">KIDS</a>
+    </div>
+  </li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">EXAMINATION</a>
+    <div class="dropdown-content">
+      <a href="#"><span style="cursor:pointer" onclick="opencita()">CITA</span></a>
+      <a href="#"><span style="cursor:pointer" onclick="opendita()">DITA</span></a>
+      <a href="#"><span style="cursor:pointer" onclick="openadita()">ADITA</span></a>
+        </div>
+            </li>
+            <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">INTERNAL EXAM</a>
+    <div class="dropdown-content">
+      <a href="#">COMPUTER FUNDAMENTALS</a>
+      <a href="#">MS-WORD</a>
+      <a href="#">MS-EXCEL</a>
+      <a href="#">MS-POWERPOINT</a>
+      <a href="#">MS-ACCESS</a>
+        <a href="#">VISUAL BASIC</a>
+        <a href="#">INTERNET</a>
+        <a href="#">TYPING TEST</a>
+        </div>
+            </li>
+            <li><a href="#news">&#xf501;RESULT</a></li>
+            <li class="log" style="float:right"><a href="index.html">&#xf011;Log out</a></li>
+            
+</ul>
+        <div id="cita" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closecita()">&times;</a>
+  <div class="overlay-content">
+    <a href="https://www.pcbooks.in/exam/yctc/cita/start_cita.php">Theory Exam & Typing Test</a>
+    <a href="#">Practical Exam</a>
+  </div>
+</div>
+        <div id="dita" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closedita()">&times;</a>
+  <div class="overlay-content">
+   <a href="https://www.pcbooks.in/exam/yctc/all/start.php?select=DITA">Theory Exam</a>
+    <a href="#">Practical Exam</a>
+  </div>
+</div>
+        <div id="adita" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeadita()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Theory Exam</a>
+    <a href="#">Practical Exam</a>
+  </div>
+</div>
+        <button class="show" onclick="myFunction()">SHOW/HIDE</button>
+        <button class="down"><img src="586abf79b6fc1117b60b2755.png" height="42px" width="110px"></button>
+
+<div id="myDIV">
+<img src="#">
+</div>
+        
+        <script>
+function opencita() {
+  document.getElementById("cita").style.width = "100%";
+}
+
+function closecita() {
+  document.getElementById("cita").style.width = "0%";
+}
+            function opendita() {
+  document.getElementById("dita").style.width = "100%";
+}
+
+function closedita() {
+  document.getElementById("dita").style.width = "0%";
+}
+            function openadita() {
+  document.getElementById("adita").style.width = "100%";
+}
+
+function closeadita() {
+  document.getElementById("adita").style.width = "0%";
+}
+            function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+        
+    </body>
+        </html>

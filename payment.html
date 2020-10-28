@@ -1,0 +1,88 @@
+<html>
+    <head>
+<title>Payment Getway</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel = "icon" href ="logo.ico" type = "image/x-icon">
+        <link rel="stylesheet" href="pay.css">
+    </head>
+    
+    
+<body >
+    <div class="head">
+    <left>
+    <img src="logo.png" alt="Avatar" class="photo">
+        </left>
+<p class="bycsm">BHARTIYA YUVA COMPUTER SAKSHARATA MISSION</p>
+        <div class="center">
+    <h3>An ISO-9001-2015 Certified Computer Education Organization</h3>
+            <h2 style="color: lightyellow;">CENTER - PACHRA YUVA COMPUTER TRAINING CENTER</h2>
+        <h3>Pachra, Paschim Midnapore</h3>
+        <h3>CENTER CODE : BYCSM/LC0122</h3>
+            <br>
+        </div>
+    </div>
+   <h1>PAYMENT GETWAY</h1>
+    <div class='tabs'>
+  <input type='radio' id='r1' name='t' checked
+  ><label for='r1'><i class='fab fa-amazon-pay'></i> Google Pay</label
+  ><div class='content'>
+        <center>
+        <img src=gpay_qr.jpeg height="450px" width="330px">
+        </center>
+        </div><input type='radio' id='r2' name='t'
+  ><label for='r2'><i class="fa fa-money"></i> PhonePe</label
+  ><div class='content'>
+        <center>
+        <img src=ppay_qr.jpeg height="450px" width="330px">
+        </center>
+        </div><input type='radio' id='r3' name='t'
+  ><label for='r3'><i class="fa fa-bank"></i> Bank Transfer</label
+        ><div class='content' id="bank">
+        <center>
+        <h2 style="font-family:Arial Unicode MS;"><u>Bank Account Details</u></h2>
+        </center>
+        <br>
+        <ul style="list-style: none">
+            <li><b>BANK :</b></li>
+            <li>STATE BANK OF INDIA</li>
+            <br>
+            <li><b>ACCOUNT HOLDER NAME :</b></li>
+            <LI>Sk. Miskin Ali</LI>
+            <br>
+            <li><b>ACCOUNT NUMBER :</b></li>
+            <li>34531402998</li>
+            <br>
+            <li><b>IFSC CODE :</b></li>
+            <li>SBIN0003647</li>
+                </ul></div
+  ><div id='slider'></div>
+</div>
+
+    <footer>
+  <p> If you have any queries please do email us on bycsmpachra@gmail.com or call us on +91 6294570048.<br>
+  </p>
+</footer>
+<!-- "><div"s are required to avoid spaces between display: inline-block elements. https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+    <script>
+        
+    const target = window.document.getElementsByTagName('h1')[0]
+
+const flickerLetter = letter => `<span style="animation: text-flicker-in-glow ${Math.random()*4}s linear both ">${letter}</span>`
+const colorLetter = letter => `<span style="color: hsla(${Math.random()*360}, 100%, 80%, 1);">${letter}</span>`;
+const flickerAndColorText = text => 
+  text
+    .split('')
+    .map(flickerLetter)
+    .map(colorLetter)
+    .join('');
+const neonGlory = target => target.innerHTML = flickerAndColorText(target.textContent);
+
+
+neonGlory(target);
+target.onclick = ({ target }) =>  neonGlory(target);
+        
+    </script>
+    </body>
+</html>

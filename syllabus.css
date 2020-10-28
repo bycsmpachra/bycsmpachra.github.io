@@ -1,0 +1,153 @@
+ body
+    {
+        background-color:
+    }
+    
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse:
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 9px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+    .table
+    {
+        margin-left: 200px;
+    }
+    .cita
+    {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align:center;
+  font-weight: bold;
+  background-color: #4CAF50;
+  color: white;
+}
+    .applybtn
+    {
+       background-color: #4CAF50; /* Green */
+       border: none;
+       color: white;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+       cursor: pointer;
+       float: left;
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        transition: all 0.5s;
+    }
+    
+    .applybtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+    
+    .applybtn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.applybtn:hover span {
+  padding-right: 25px;
+}
+
+.applybtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
+    .exitbtn
+    {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        float: right;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    
+    
+    .exitbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+    
+    .exitbtn span:after {
+  content: "\00D7";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.exitbtn:hover span {
+  padding-right: 25px;
+}
+
+.exitbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
+    .exitbtn:hover {
+  background-color:orangered;
+  color: white;
+}
+    
+     img.photo
+    {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+        
+        .bycsm
+    {
+        padding-top: 0px;
+        margin-top: -130px;
+        text-align: center;
+        color:yellow;
+        font-weight: bold;
+        font-size: 38px;
+    }
+        
+        .center
+        {
+            text-align: center;
+            line-height:10px;
+            margin-top: -30px;
+            color:white;
+        }
+        
+        .head
+        {
+            background-color:#1abc9c;
+        }
