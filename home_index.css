@@ -640,7 +640,7 @@ q
     margin-right: auto;
        
   }
-    .bycsm, .center
+    .bycsm
     {
         width: 100%;
         margin: auto;
@@ -650,7 +650,10 @@ q
 .center h2
     {
         margin: auto;
-        text-align: centers;
+        text-align: center;
         font-size: 13px;
+            margin: auto;
+        padding: inherit;
+        padding-bottom: 15px;
     }
 }
