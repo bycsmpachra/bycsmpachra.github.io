@@ -647,13 +647,12 @@ q
         padding: inherit;
         padding-bottom: 15px;
     }
-.center h2
+.center
     {
         margin: auto;
         text-align: center;
-        font-size: 13px;
-            margin: auto;
-        padding: inherit;
+        font-size: 10px;
+        padding-top: 15px;
         padding-bottom: 15px;
     }
 }
