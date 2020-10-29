@@ -625,3 +625,32 @@ q
    text-align: center;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
+
+
+
+@media screen and (max-width: 600px) {
+   img.photo{
+    height: 100px;
+       width: 100px;
+       margin: 0px;
+       padding: 0px;
+       position:relative;
+       display: block;
+    margin-left: auto;
+    margin-right: auto;
+       
+  }
+    .bycsm, .center
+    {
+        width: 100%;
+        margin: auto;
+        padding: inherit;
+        padding-bottom: 15px;
+    }
+.center h2
+    {
+        margin: auto;
+        text-align: centers;
+        font-size: 13px;
+    }
+}
